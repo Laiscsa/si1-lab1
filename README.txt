@@ -1,0 +1,1 @@
+O repositório si1-lab1 contém o código do lab1 feito por Laís Camilo, na disciplina Sitemas de Informação 1 do curso de Ciência da Computação da Universidade Federal de Campina Grande.
