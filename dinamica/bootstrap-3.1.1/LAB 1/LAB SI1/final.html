@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Sistemas de Informação 1</title>
+
+
+<script type="text/javascript">	
+	
+function Adiciona()
+{
+	//var destino = document.getElementById(selectTo); 
+	////var option = document.createElement(document.entrada.value);
+	//itemRecebido = 
+	//selecteditems.options[selecteditems.options.length] = new Option(availableitems.options[i].text);
+	//destino.add(option);
+	var x = document.getElementById("Select1");
+	var option = document.createElement("option");
+	option.text = document.Entrada.areaEntrada.value;
+	x.add(option);
+	
+	
+	}
+
+function swapSelectOptions(selectFrom,selectTo,swapAll) {
+	if (typeof(selectFrom) == "string") {
+		availableitems = document.getElementById(selectFrom);
+	}
+	if (typeof(selectTo) == "string") {
+		selecteditems= document.getElementById(selectTo);
+	}
+	for (var i = 0; i < availableitems.length; i++) {
+		if (availableitems.options[i].selected || swapAll) {  
+			selecteditems.options[selecteditems.options.length] = new Option(availableitems.options[i].text);
+			selecteditems.options[selecteditems.options.length-1].value = availableitems.options[i].value;
+			availableitems.options[i].selected = false;
+		  	availableitems.options[i] = null;
+			i--;
+		}
+	}
+}
+
+
+function Remove(selectFrom)
+{
+var x = document.getElementById(selectFrom);
+x.remove(x.selectedIndex);
+}
+
+
+</script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    
+    <style type="text/css">
+	select {
+		width: 200px;
+	}
+</style>
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Sistemas de Informação 1</h3>
+              <ul class="nav masthead-nav">
+                <li class="active"><a href="index.html">Por que cursar?</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="#">Contato</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inner cover">
+			  <br><br>
+            <h3 class="cover-heading">Cadastro concluído com sucesso!</h3>
+            <h4 class="cover-heading">Obrigada por se cadastrar para Sistemas de Informação 1. </h4>
+           <br>
+            <h4>Agora você pode adicionar quais conteúdos você deseja aprender e, se houver, quais você já aprendeu.</h4>
+<form name = "Entrada" onsubmit="return false"   class="form-horizontal well well-small" defaultbutton="Button1">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Lista de Conteúdos</legend>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext"></label>
+  <div class="controls">
+    <div class="input-append"> <!--barra ao redor do adicionar final -->
+  <input name = "areaEntrada"  id="areaEntrada" size="30" placeholder= "ex.: Arquitetura de software" type="text"> <button class="btn btn-danger" id = "Button1" onClick="Adiciona()" type="submit">Adicionar</button>
+
+</div>
+
+    
+  </div>
+</div>
+
+
+<!-- Lista de itens para aprender -->
+<br><br>
+	<form class="form-horizontal well-small">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Desejo aprender:</legend>
+
+<!-- Select Multiple -->
+<div class="control-group">
+  <label class="control-label" for="Select Multiple"></label>
+  <div class="controls">
+	  
+	  
+	  
+    <select id="Select1" name="Select1" class="input-xlarge" multiple="multiple">
+    </select>
+    
+    
+    
+    <br><br>
+    <button class="btn btn-danger" size= "5" onClick="swapSelectOptions('Select1','Select2', false)" id = "swap" type="button">Já aprendi!</button> &nbsp; &nbsp; &nbsp; &nbsp; <button id = "select1" class="btn btn-danger pull-rigth" onClick="Remove('Select1')" type="button">Remover</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+
+
+<!-- Lista do que já aprendi -->
+
+<br><br>
+<form class="form-horizontal well-small">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Já aprendi:</legend>
+
+<!-- Select Multiple -->
+<div class="control-group">
+  <label class="control-label" for="Select Multiple"></label>
+  <div class="controls">
+    <select id="Select2" name="Select2" size= "5" class="input-xlarge" multiple="multiple">
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+
+
+
+<!--
+<div class="control-group">
+	<label class="control-label" for ="listtext">Desejo aprender:</label>
+	<div class = "controls">
+		<div class = "input-list well">
+			<ul class = "unstyled">
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+			</ul>
+		
+		
+		
+		</div>
+	
+	
+	</div>
+-->
+<!-- Lista de itens ja aprendidos -->
+
+<!--
+<div class="control-group">
+	<label class="control-label" for ="listtext">Já aprendi:</label>
+	<div class = "controls">
+		<div class = "input-list pull-rigth well">
+			<ul>
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+			</ul>
+		
+		
+		
+		</div>
+	
+	
+	</div>
+
+</div>
+
+</fieldset>
+</form> -->
+
+            
+            <p class="lead"></p>
+            <p class="lead">
+				
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+				<br><br>
+				<p><a href="index.html">Retornar à página principal</a></p>
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+body{
+	background-color:#FFFFCC;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:20px;
+	margin:0;
+	padding:0;
+	text-align: center;
+
+}
+
+
+.botao {
+    font-size: 1em;
+    background: pink;
+    border: 1;
+    margin-bottom: 1em;
+    color: #003366;
+    padding: 0.2em 0.8em;
+    left: 1em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+
+}
+ 
+.botao:hover {
+	color: pink;
+    background: #000;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+ 
+.botao, select, label.checkbox {
+    cursor: pointer;
+}
+
+
+fieldset {
+    border: 0;
+}
+
+fieldset.grupo .campo {
+    margin-right: 1em;
+    text-indent: 10%;
+}
+
+
+
+.grupo:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+
+}
+
+
+.campo label {
+    margin-bottom: 0.5;
+	display: block;
+	text-align: left; /*adicionei isso aqui*/
+
+    
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo textarea {
+    padding: 0.2em;
+    border: 1px solid #CCC;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    margin-right: 8em;
+    width: 20em;
+    
+    
+
+
+}
+ 
+.campo input:focus, .campo textarea:focus {
+    background: #FFC;
+}
+
+#final {
+	position: absolute;
+	left: 25%; 
+	top:65px;
+	width: 50%;
+	background: white;
+	color: navy;
+
+	height: 50%;
+	border: 2px solid pink;
+}
+
+
+#cadastro{
+	position: absolute;
+	left: 25%; 
+	top:65px;
+	width: 50%;
+	background: white;
+	color: navy;
+
+	height: 50%;
+	border: 2px solid pink;
+
+}
+
+#main{
+	position: absolute;
+	left: 25%; 
+	top:65px;
+	width: 50%;
+	background: white;
+	color: navy;
+
+	height: 50%;
+	border: 2px solid pink;
+}
+
+#cursar {
+	position: absolute;
+	left: 25%; 
+	top:65px;
+	width: 50%;
+	background: white;
+	color: navy;
+
+	height: 50%;
+	border: 2px solid pink;
+
+}
+
+#menu {
+	background: black;
+	display: table;
+	width: 100%;
+
+}
+
+#menu ul {
+			list-style: none;
+			margin:0;
+			padding:0;
+			
+		}
+		
+#menu ul li { 
+	display: inline;
+	
+}
+
+#menu ul li a {
+	font: 18px verdana, arial, tahoma, sans-serif;
+	background: pink;
+	color: #000;
+	text-decoration: none;
+	float: left;
+	padding: 5px 10px;
+	margin-left:1px
+
+}
+
+#menu ul li a:hover{
+	color: pink;
+	background: #000;
+	
+}
