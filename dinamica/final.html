@@ -12,14 +12,11 @@
 
 
 <script type="text/javascript">	
-	
+
+
+// Funcao do add
 function Adiciona()
 {
-	//var destino = document.getElementById(selectTo); 
-	////var option = document.createElement(document.entrada.value);
-	//itemRecebido = 
-	//selecteditems.options[selecteditems.options.length] = new Option(availableitems.options[i].text);
-	//destino.add(option);
 	var x = document.getElementById("Select1");
 	var option = document.createElement("option");
 	option.text = document.Entrada.areaEntrada.value;
@@ -28,6 +25,8 @@ function Adiciona()
 	
 	}
 
+
+// Funcao do Swap 
 function swapSelectOptions(selectFrom,selectTo,swapAll) {
 	if (typeof(selectFrom) == "string") {
 		availableitems = document.getElementById(selectFrom);
@@ -46,7 +45,7 @@ function swapSelectOptions(selectFrom,selectTo,swapAll) {
 	}
 }
 
-
+// Funcao do Remove
 function Remove(selectFrom)
 {
 var x = document.getElementById(selectFrom);
@@ -174,53 +173,6 @@ x.remove(x.selectedIndex);
 
 </fieldset>
 </form>
-
-
-
-
-
-<!--
-<div class="control-group">
-	<label class="control-label" for ="listtext">Desejo aprender:</label>
-	<div class = "controls">
-		<div class = "input-list well">
-			<ul class = "unstyled">
-				<li>Item 1</li>
-				<li>Item 2</li>
-				<li>Item 3</li>
-			</ul>
-		
-		
-		
-		</div>
-	
-	
-	</div>
--->
-<!-- Lista de itens ja aprendidos -->
-
-<!--
-<div class="control-group">
-	<label class="control-label" for ="listtext">Já aprendi:</label>
-	<div class = "controls">
-		<div class = "input-list pull-rigth well">
-			<ul>
-				<li>Item 1</li>
-				<li>Item 2</li>
-				<li>Item 3</li>
-			</ul>
-		
-		
-		
-		</div>
-	
-	
-	</div>
-
-</div>
-
-</fieldset>
-</form> -->
 
             
             <p class="lead"></p>
